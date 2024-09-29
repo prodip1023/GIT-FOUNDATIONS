@@ -261,29 +261,27 @@ git config --global core.editor vim
 
     2. Switching Branches
 
-      ```
-      git checkout <branch-name>  
-      ```
-      ```
-      git checkout -b dev (create and switch branch)
-      ```
-      ```
-      git switch -c <branch-name>   (Git version 2.23 and above)
-      
-      ```
+         ```
+         git checkout <branch-name>  
+         ```
+         ```
+         git checkout -b dev (create and switch branch)
+         ```
+         ```
+         git switch -c <branch-name>   (Git version 2.23 and above)
+         
+         ```
     3. Merging Branches
     4. Deleting Branches
-  
-      ```
-      git branch -d <branch-name>
-      ```
-
-  # NOTE
-
+   
          ```
-         <b>When to use which command:</b> If you are working with a version of Git that supports the git switch command (Git version 2.23 and above), it's recommended to use git switch for changing branches and git checkout for discarding changes in your working directory.
-
+         git branch -d <branch-name>
          ```
+
+   
+   <b>When to use which command:</b> If you are working with a version of Git that supports the git switch command (Git version 2.23 and above), it's recommended to use git switch for changing branches and git checkout for discarding changes in your working directory.
+
+
 
 ### MERGING
 
@@ -306,10 +304,10 @@ git config --global core.editor vim
 - "Merge conflicts" can occur in the process of integrating commits from a different source branch.
 - When a merge cannot be fully performed automatically then a merge conflict takes place.
 - Git will try to combine as much as it can,but then it will leave special markers (e.g. >>> and <<< )
-- ||| ->  Merged anchestor.
-- === -> end of the anchestor
-- >>> -> incoming change.
-- <<< -> Current branch
+- `|||` ->  Merged anchestor.
+- `===` -> end of the anchestor
+-  `>>>` -> incoming change.
+- `<<<` -> Current branch
 - Change manually on text editor (vs code).
 
 ### REMOTE REPOSITORIES
@@ -354,10 +352,10 @@ git config --global core.editor vim
 
 - Git push is a Git command line utility which is used to push changes from your local repository to a remote repository.
 
-      ```
+    ```
       git push -u <remote-name> <branch-name>
       git push -u origin main
-      ```
+    ```
 
 ### PERSONAL ACCESS TOKEN SETUP
 
@@ -376,7 +374,7 @@ git config --global core.editor vim
   9. Click “Generate token.”
   10. Copy the GitHub Personal Access Token and use this as the password when you do a Git push to GitHub.
   
-  [ REFERENCE:CLICK HERE ](https://www.geeksforgeeks.org/how-to-generate-personal-access-token-in-github/)
+  [ REFERENCE CLICK HERE ](https://www.geeksforgeeks.org/how-to-generate-personal-access-token-in-github/)
 
 
 ### PULL REQUESTS?
@@ -524,16 +522,16 @@ typically a git merge.
 - It allows you to shape history or crafting commits.
 - 3 different modes :
 
-      * Soft: used to unstage the files which we have staged using the git add command.  
-       ```
+   * Soft: used to unstage the files which we have staged using the git add command.  
+   ```
        git reset --soft HEAD~3
-       ``` 
-      * Mixed: used to remove the file which we have commited using the git commit command.
-      * Hard: used to remove all things which we have placed in our code.
+   ``` 
+   *  Mixed: used to remove the file which we have commited using the git commit command.
+   * Hard: used to remove all things which we have placed in our code.
 
-      ```
+   ```
       git reset <mode> <sha-id/commit-id>
-      ```
+   ```
     [GIT RESET CLICK HERE ](https://git-scm.com/docs/git-reset) 
 
 ### STASHING
@@ -580,4 +578,4 @@ typically a git merge.
    vi master (start to end changes show)
    ```
 
-[REFLOG CLICK HERE ](https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog)
+  [ REFLOG CLICK HERE ](https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog)
